@@ -1,7 +1,10 @@
 Options -Indexes
 
-# Optionally you can disable 'display errors'
-php_flag display_errors Off
+# It's a good idea to disable 'display_error' in production:
+#
+#     php_flag display_errors Off
+#
+php_flag display_errors On
 
 # Cross-Origin Resource Sharing (CORS).
 <IfModule mod_headers.c>
