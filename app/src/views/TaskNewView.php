@@ -5,12 +5,21 @@ use controllers\TaskNewController;
 
 class TaskNewView extends View
 {
+    /**
+     * Constructor.
+     */
     public function __construct()
     {
         parent::__construct(new TaskNewController());
     }
 
-    public function getDocument() {
+    /**
+     * {@inheritdoc}
+     *
+     * @return string
+     */
+    public function getDocument()
+    {
         $task = $this->controller->task;
 
         return json_encode(

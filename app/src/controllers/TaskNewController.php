@@ -8,6 +8,9 @@ class TaskNewController extends Controller
 {
     public $task;
 
+    /**
+     * Constructor.
+     */
     public function __construct()
     {
         parent::__construct();
@@ -15,11 +18,26 @@ class TaskNewController extends Controller
         $this->onPost([$this, "post"]);
     }
 
+    /**
+     * OPEN request handler.
+     *
+     * This method is fired before any other request handler and it's a good
+     * place to initiate resources, such as database connections, etc...
+     *
+     * @return void
+     */
     public function open()
     {
         $this->task = new TaskModel($this->db);
     }
 
+    /**
+     * POST request handler.
+     *
+     * This method processes POST requests.
+     *
+     * @return void
+     */
     public function post()
     {
         $title = $this->getParam("title", ["required" => true]);

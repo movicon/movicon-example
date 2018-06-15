@@ -5,12 +5,21 @@ use controllers\TaskEditController;
 
 class TaskEditView extends View
 {
+    /**
+     * Constructor.
+     */
     public function __construct()
     {
         parent::__construct(new TaskEditController());
     }
 
-    public function getDocument() {
+    /**
+     * {@inheritdoc}
+     *
+     * @return string
+     */
+    public function getDocument()
+    {
         $task = $this->controller->task;
 
         return json_encode(
