@@ -1,16 +1,16 @@
 <?php
 namespace views;
 use core\http\View;
-use controllers\TasksController;
+use controllers\TaskListController;
 
-class TasksView extends View
+class TaskListView extends View
 {
     /**
      * Constructor.
      */
     public function __construct()
     {
-        parent::__construct(new TasksController());
+        parent::__construct(new TaskListController());
     }
 
     /**

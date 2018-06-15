@@ -1,7 +1,7 @@
 <?php
 require_once "../vendor/autoload.php";
 require_once "../config.php";
-use views\TasksView;
+use views\TaskListView;
 
-$v = new TasksView();
+$v = new TaskListView();
 $v->printDocument();
