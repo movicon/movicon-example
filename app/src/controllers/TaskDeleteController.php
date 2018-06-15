@@ -16,7 +16,14 @@ class TaskDeleteController extends Controller
         parent::__construct();
         $this->onPost([$this, "post"]);
     }
-
+    
+    /**
+     * POST request handler.
+     *
+     * This method processes POST requests.
+     *
+     * @return void
+     */
     public function post()
     {
         $id = $this->getParam("id", ["required" => true]);
