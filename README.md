@@ -8,6 +8,7 @@ task-list.php                          Returns the list of tasks.
 task-detail.php?id                     Prints the task details.
 task-new.php?title&[state = 'open']    Creates a task.
 task-edit.php?id&title&state           Edits a task.
+task-delete.php?id                     Deletes a task
 ```
 
 ## Install
