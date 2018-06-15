@@ -25,11 +25,7 @@ class TaskNewController extends Controller
         $title = $this->getParam("title", ["required" => true]);
         $state = $this->getParam("state", ["default" => "open"]);
 
-        if (!in_array($state, ["open", "close"])) {
-            throw new Exception("Invalid state");
-        }
-
-        // updates the record
+        // updates the record and refreshes it
         $this->task->title = $title;
         $this->task->state = $state;
         $this->task->save();

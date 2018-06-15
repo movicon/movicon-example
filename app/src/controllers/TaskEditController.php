@@ -30,7 +30,7 @@ class TaskEditController extends Controller
         $title = $this->getParam("title", ["required" => true]);
         $state = $this->getParam("state", ["required" => true]);
 
-        // updates the record
+        // updates the record and refreshes it
         $this->task->title = $title;
         $this->task->state = $state;
         $this->task->save();
