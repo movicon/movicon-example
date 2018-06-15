@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": ">=5.6.0",
-        "movicon/db": "^2.0",
+        "movicon/db": "^2.1",
         "movicon/http": "^1.0"
     },
     "autoload": {

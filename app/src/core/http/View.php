@@ -18,4 +18,19 @@ abstract class View extends HttpView
     {
         parent::__construct($controller, "application/json");
     }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @return void
+     */
+    public function printDocument()
+    {
+        try {
+            parent::printDocument();
+        } catch (Exception $e) {
+            echo $e->getMessage();
+            throw $e;
+        }
+    }
 }
