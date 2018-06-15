@@ -1,31 +1,33 @@
 # MoViCon Example
 
-An example of RESTful application that uses the [MoViCon](https://github.com/movicon/movicon) framework for PHP. The application
-is a simple TODO manager that contains the following routes:
+An example of RESTful application that uses the [MoViCon](https://github.com/movicon/movicon) framework for PHP. This application is a simple TODO manager that contains the following routes:
 
 ```text
-task-list.php                          Returns the list of tasks.
-task-detail.php?id                     Prints the task details.
-task-new.php?title&[state = 'open']    Creates a task.
-task-edit.php?id&title&state           Edits a task.
-task-delete.php?id                     Deletes a task
+task-list.php                        Returns the list of tasks.
+task-detail.php?id                   Prints the task details.
+task-new.php?title&[state = 'open']  Creates a task.
+task-edit.php?id&title&state         Edits a task.
+task-delete.php?id                   Deletes a task
 ```
 
 ## Install
 
-  1. Execute the following command from a terminal:
+  1. Execute the following command from a terminal (replace `[folder-name]` by your folder):
   ```bash
-  git clone https://github.com/movicon/movicon-example
+  git clone https://github.com/movicon/movicon-example [folder-name]
   ```
-
   2. Create a MySQL database and import `/scripts/database.sql` to create the tables.
-
   3. Copy `config-sample` to `config.php` and change it with the appropriate values.
+  4. Install the libraries (replace `<folder-name>` by your folder):
+  ```bash
+  cd <folder-name>
+  composer install
+  ```
 
 After that, test it by opening the following link:  
 http://path/to/your/folder/app/task-list.php
 
-Alternatively you can create a Virtual Host in Apache2. Simply move the following snippet to `/etc/apache2/sites-available/todo.localhost.conf`:
+Alternatively you can create a Virtual Host in Apache2. Simply move the following snippet to `/etc/apache2/sites-available/todo.localhost.conf` (**note that the `DOCUMENT_ROOT` is the `app` folder**):
 
 ```text
 <VirtualHost *:80>
@@ -44,8 +46,7 @@ Alternatively you can create a Virtual Host in Apache2. Simply move the followin
 
 And then execute the following command to enable it:
 ```bash
-cd /etc/apache2/sites-available
-sudo a2ensite todo.localhost.conf
+sudo a2ensite todo.localhost
 sudo service apache2 reload
 ```
 
