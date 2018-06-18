@@ -1,4 +1,4 @@
-# MoViCon Example
+# TODO manager
 
 An example of RESTful application that uses the [MoViCon](https://github.com/movicon/movicon) framework for PHP. This application is a simple TODO manager that contains the following routes:
 
