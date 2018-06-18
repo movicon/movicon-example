@@ -1,3 +1,0 @@
-# Prevents from accessing directly to the scripts under 'src/'.
-Order deny,allow
-Deny from all
